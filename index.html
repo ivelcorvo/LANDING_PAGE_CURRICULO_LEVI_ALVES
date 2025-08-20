@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Levi Alves Junior - Portfólio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class', // ATIVA O MODO ESCURO DO TAILWIND CDN
+    }
+  </script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition duration-500">
+
+  <header class="flex justify-between items-center p-6 shadow-md bg-white dark:bg-gray-800">
+    <h1 class="text-2xl font-bold">Levi Alves Junior</h1>
+    <button class="px-4 py-2 rounded-lg border bg-gray-200 dark:bg-gray-700 hover:scale-105 transition">
+      🌙/☀️
+    </button>
+  </header>
+
+  <section class="flex flex-col items-center text-center p-10">
+    <h2 class="text-3xl font-bold">Desenvolvedor Web Front-end Júnior</h2>
+    <p class="mt-4 max-w-2xl">
+      3+ anos de experiência no ciclo completo de desenvolvimento web, 
+      desde a criação de interfaces responsivas até a manutenção de aplicações robustas.
+    </p>
+    <div class="flex gap-4 mt-6">
+      <a href="mailto:levialvesjr@hotmail.com" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">E-mail</a>
+      <a href="https://www.linkedin.com/in/levi-alves-junior-09b91a189" target="_blank" 
+         class="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-800">LinkedIn</a>
+    </div>
+  </section>
+
+  <main class="flex flex-col md:flex-row gap-6 px-8 md:px-20 pb-16">
+
+    <!-- COMPETÊNCIAS -->
+    <section class="flex-1 bg-white dark:bg-gray-800 p-6 rounded-2xl shadow">
+      <h3 class="text-xl font-semibold mb-4">Competências</h3>
+      <ul class="list-disc ml-5 space-y-2">
+        <li><strong>Frameworks & Bibliotecas:</strong> React.js, Next.js, Bootstrap, jQuery</li>
+        <li><strong>Linguagens:</strong> JavaScript, TypeScript, PHP</li>
+        <li><strong>Estilização:</strong> Tailwind CSS, HTML5, CSS3</li>
+      </ul>
+    </section>
+
+    <!-- EXPERIÊNCIA -->
+    <section class="flex-1 bg-white dark:bg-gray-800 p-6 rounded-2xl shadow">
+      <h3 class="text-xl font-semibold mb-4">Experiência Profissional</h3>
+      <div class="mb-4">
+        <h4 class="font-bold">Preditiva Inteligência Artificial</h4>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Out 2022 - Jan 2025</p>
+        <ul class="list-disc ml-5">
+          <li>Desenvolvimento e manutenção de aplicações web.</li>
+          <li>Implementação de novas funcionalidades e correções.</li>
+          <li>Colaboração em sistemas internos e soluções personalizadas.</li>
+        </ul>
+      </div>
+      <div class="mb-4">
+        <h4 class="font-bold">Nicosystem</h4>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Set 2020 - Jan 2021</p>
+        <ul class="list-disc ml-5">
+          <li>Criação de telas de cadastro e relatórios.</li>
+          <li>Desenvolvimento com Delphi, Firebird, FastReport.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- FORMAÇÃO E CERTIFICAÇÕES -->
+  <section class="px-8 md:px-20 pb-16">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow">
+      <h3 class="text-xl font-semibold mb-4">Formação & Certificações</h3>
+      <p><strong>Universidade Paulista</strong> - Ciência da Computação (2016 - 2022)</p>
+      <ul class="list-disc ml-5 mt-2">
+        <li>Aprenda a Criar Sites Responsivos com HTML5 e CSS3</li>
+        <li>PHP 7 - Fundamentado e Objetivo</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="text-center py-6 bg-gray-200 dark:bg-gray-700">
+    <p>© 2025 Levi Alves Junior - Todos os direitos reservados</p>
+  </footer>
+
+  <!-- SCRIPT PARA O MODO ESCURO FUNCIONAR  -->
+  <script>
+      const btn = document.querySelector('button');
+
+      // CARREGA A PREFERENCIA SALVA
+      if(localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+
+      btn.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        localStorage.setItem(
+        'theme',
+        document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+        );
+      });
+  </script>
+
+</body>
+</html>
